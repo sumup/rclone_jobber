@@ -123,7 +123,8 @@ if [ "$exit_code" -eq 0 ]; then            #if no errors
     echo "$confirmation"
     send_to_log "$confirmation"
     send_to_log ""
-    wget $monitoring_URL -O /dev/null
+	# don't care about wget
+    # wget $monitoring_URL -O /dev/null
     exit 0
 else
     print_message "ERROR" "failed.  rclone exit_code=$exit_code"
